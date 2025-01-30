@@ -13,8 +13,20 @@ assert convertTemp(10,'C') == 50
 assert converTemp(32,'F') == 0
 """
 
-def convertTemp():
-    return
+def convertTemp(a,b):
+    a=float(a)
+    if b=='F':
+        Celsius=(a-32)*5/9
+        Celsius=round(Celsius,2)
+        print(Celsius)
+        return Celsius
+    if b=='C':
+        Fahrenheit=(a*9/5)+32
+        Fahrenheit=round(Fahrenheit,2)
+        print(Fahrenheit)
+    return Fahrenheit
+   
+
 
 def tests():
     assert convertTemp(10,'C') == 50.00
